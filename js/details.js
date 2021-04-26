@@ -8,6 +8,8 @@ const url = "https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?cou
 const idContainer = document.querySelector("id");
 const detailsContainer = document.querySelector(".detailsContainer");
 idContainer.innerHTML = id;
+
+detailsContainer.innerHTML = `<div class="loader"></div>`;
 async function fetchProvince() {
     try {
         const response = await fetch(url, {

@@ -1,12 +1,83 @@
-/*contact page*/
-form{
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: auto;
-   gap: 20px;
-   text-align: center; 
+/*header*/
+header{
+    background-image: url('../images/tim-foster-mQvQ81RwAz0-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
 }
-input{
+ul{
+    padding: 60px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.link{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* to inspiration: w3schools.com (2021). Retrieved April 2021, from: https://www.w3schools.com/css/css_image_transparency.asp*/
+/*loader*/
+.loader{
+    border: 10px solid;
+    border-top: 10px solid rgba(21, 117, 108, 0.438);
+    border-right: 10px solid rgba(21, 117, 107, 0.801);
+    border-bottom: 10px solid rgba(21, 117, 107, 0.972);
+    border-left: 10px solid rgba(21, 117, 107, 0.198);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* to inspiration: w3schools.com (2021). Retrieved April 2021, from: https://www.w3schools.com/howto/howto_css_loader.asp*/
+/*index*/
+figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 320px){
+.map{
+    max-width: 90%;
+}
+}
+@media (min-width: 321px){
+    figure{
+        display: none;
+    }
+    .results{
+        background-image: url('../images/canadian_map.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 27%;
+}
+}
+/*contact page*/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+   display: inline-block;
+   text-align: center;
+   border: 2px solid rgb(11, 78, 71);
+   border-radius: 6px;
+   padding: 50px;
+}
+input,
+textarea{
     display:block;
     margin: 10px auto;
 }
@@ -15,4 +86,8 @@ input{
     color: red;
     font-size: 0.9rem;
     margin-top: 2px;
+}
+button{
+    padding: 20px 30px;
+    background-color: rgb(109, 200, 191);
 }

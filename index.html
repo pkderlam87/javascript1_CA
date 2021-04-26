@@ -7,20 +7,46 @@
     <meta name="Data about Covid19 in Canada"
         content="Relevant information about provinces, number of deaths and last Update">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css" />
     <title>Data about Covid19 in Canada|index.html</title>
+    <script src="https://kit.fontawesome.com/1dd9a9266b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <a href="contact.html">Contact us</a>
-            <a href="index.html">Home page</a>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html" class="link"><i class="fab fa-canadian-maple-leaf"></i>Home</a>
+                <a href="contact.html" class="link"><i class="fas fa-envelope-open-text"></i>Contact</a>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section>
-            <div class="results"></div>
-            <div class="list"></div>
+            <h1>Choose a province:</h1>
+            <select>
+                <option value="0" name="alberta">Alberta</option>
+                <option value="1" name="british columbia">British Columbia</option>
+                <option value="2">Diamond Princess</option>
+                <option value="3">Grand Princess</option>
+                <option value="4">Manitoba</option>
+                <option value="5">New Brunswick</option>
+                <option value="6">Newfoundland and Labrador</option>
+                <option value="7">Northwest Territories</option>
+                <option value="8">Nova Scotia</option>
+                <option value="9">Nunavut</option>
+                <option value="10">Ontario</option>
+                <option value="11">Prince Edward Island</option>
+                <option value="12">Quebec</option>
+                <option value="13">Repatriated Travellers</option>
+                <option value="14">Saskatchewan</option>
+                <option value="15">Yukon</option>
+            </select>
+            <div class="results">
+                <figure>
+                    <img src="/images/canadian_map.jpg" alt="Canadian's map" class="map" />
+                </figure>
+            </div>
         </section>
     </main>
     <script src="js/script.js"></script>

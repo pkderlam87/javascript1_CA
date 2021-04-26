@@ -1,14 +1,18 @@
 
+const select = document.querySelector("select");
 const resultsContainer = document.querySelector(".results");
-const list = document.querySelector(".list");
-resultsContainer.addEventListener("change", buildList);
+
+resultsContainer.innerHTML = `<div class="loader"></div>`;
+
+select.addEventListener("change", buildList);
 
 function buildList(event) {
     console.log(event.target.value);
     const amount = event.target.value;
-    list.innerHTML = " ";
+    const provinceName = event.target.name;
+    resultsContainer.innerHTML = " ";
     for (let i = 0; i <= amount; i++) {
-        list.innerHTML += `<a href = "details.html?covid19Stats=${i}">${i}</a>`;
+        resultsContainer.innerHTML = `<a href = "details.html?covid19Stats=${i}" class= "link">${provinceName}</a>`;
     }
 }
 
