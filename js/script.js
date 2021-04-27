@@ -16,7 +16,7 @@ async function canadaCorona() {
         resultsContainer.innerHTML = " ";
         for (let i = 0; i < covid19Stats.length; i++) {
             const province = covid19Stats[i].province;
-            resultsContainer.innerHTML += `<div class= "card"><a href="details.html?covid19Stats=${province}" class= "card">${province}</a></div>`;
+            resultsContainer.innerHTML += `<div class= "card"><a href="details.html?provinceIndex=${i}" class= "link">${province}</a></div>`;
         }
     } catch (error) {
         console.log(error);

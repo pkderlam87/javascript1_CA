@@ -33,8 +33,6 @@ function validateForm() {
         emailError.style.display = "block";
     }
 };
-button.addEventListener("click", validateForm);
-
 function checkLength(value, len) {
     if (value.trim().length >= len) {
         return true;
@@ -42,17 +40,16 @@ function checkLength(value, len) {
         return false;
     }
 }
-
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
-
+button.addEventListener("click", validateForm);
 function sendForm(event) {
     event.preventDefault();
     if ((checkLength(myname.value, 1) && (checkLength(subject.value, 10) && (checkLength(address.value, 25) && (validateEmail(email.value)))))) {
-        message.innerHTML = createMessage("success", "Your message has been sent");
+        message.innerHTML = createMessage("success", "Your message has been sent!");
         form.reset();
     }
 }
