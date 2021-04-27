@@ -47,12 +47,12 @@ figure{
     justify-content: center;
     align-items: center;
 }
-@media (min-width: 320px){
+@media (min-width: 320px) and (max-width: 600px){
 .map{
     max-width: 90%;
 }
 }
-@media (min-width: 321px){
+@media (min-width: 601px) {
     figure{
         display: none;
     }
@@ -61,6 +61,22 @@ figure{
         background-size: cover;
         background-repeat: no-repeat;
         padding: 27%;
+}
+.card{
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+    display: grid;
+    grid-template-columns: repeat(2 2fr);
+    text-align: center;
+}
+.card a{
+    font-weight: bold;
+    font-size: 1em;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
 }
 }
 /*contact page*/
@@ -91,3 +107,21 @@ button{
     padding: 20px 30px;
     background-color: rgb(109, 200, 191);
 }
+/*Message -components*/
+.message {
+    padding: 1rem;
+    border: 1px solid grey;
+    color: grey;
+}
+
+.success {
+    color: green;
+    border-color: green;
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.error {
+    color: red;
+    border-color: red;
+    background: rgba(255, 0, 0, 0.1);
+} 

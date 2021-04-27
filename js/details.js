@@ -5,11 +5,9 @@ if (id === null) {
     location.href = "/";
 }
 const url = "https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?country=Canada/" + id;
-const idContainer = document.querySelector("id");
 const detailsContainer = document.querySelector(".detailsContainer");
-idContainer.innerHTML = id;
-
 detailsContainer.innerHTML = `<div class="loader"></div>`;
+
 async function fetchProvince() {
     try {
         const response = await fetch(url, {
@@ -20,12 +18,12 @@ async function fetchProvince() {
             }
         });
         const details = await response.json();
-        const covid19Stats = details.data.covid19Stats;
-        console.log(covid19Stats);
+        console.log(details);
+        const covid19Stats = details.data.covid19Stats.id;
         createHtml(covid19Stats);
     } catch (error) {
         console.log(error);
-        detailsContainer.innerHTML = error;
+        detailsContainer.innerHTML = createMessage(error, "An error occurred");
     }
 }
 fetchProvince();

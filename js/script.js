@@ -1,25 +1,8 @@
-
-const select = document.querySelector("select");
 const resultsContainer = document.querySelector(".results");
 
 resultsContainer.innerHTML = `<div class="loader"></div>`;
 
-select.addEventListener("change", buildList);
-
-function buildList(event) {
-    console.log(event.target.value);
-    const amount = event.target.value;
-    const provinceName = event.target.name;
-    resultsContainer.innerHTML = " ";
-    for (let i = 0; i <= amount; i++) {
-        resultsContainer.innerHTML = `<a href = "details.html?covid19Stats=${i}" class= "link">${provinceName}</a>`;
-    }
-}
-
-
-
-
-/*async function canadaCorona() {
+async function canadaCorona() {
     try {
         const response = await fetch("https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?country=Canada", {
             "method": "GET",
@@ -30,16 +13,14 @@ function buildList(event) {
         });
         const results = await response.json();
         const covid19Stats = results.data.covid19Stats;
-        console.log(covid19Stats);
-        resultsContainer.innerHTML = "";
+        resultsContainer.innerHTML = " ";
         for (let i = 0; i < covid19Stats.length; i++) {
-            resultsContainer.innerHTML += `<div>Province:${covid19Stats[i].province}</div>
-                                            <div>${covid19Stats[i].deaths}</div>
-                                            <div>${covid19Stats[i].lastUpdate}</div>`;
+            const province = covid19Stats[i].province;
+            resultsContainer.innerHTML += `<div class= "card"><a href="details.html?covid19Stats=${province}" class= "card">${province}</a></div>`;
         }
     } catch (error) {
-        console.log("An error occurred", error);
-        resultsContainer.innerHTML = "Something is wrong... Try again!";
+        console.log(error);
+        resultsContainer.innerHTML = createMessage(error, "An error occurred");
     }
 }
-canadaCorona();*/
+canadaCorona();
