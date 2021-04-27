@@ -28,7 +28,7 @@ async function fetchProvince() {
 fetchProvince();
 function createHtml(covid19Stats) {
     detailsContainer.innerHTML = `<h1> ${covid19Stats.country}</h1>
-                                    <p>Province: ${covid19Stats.province}</p>
-                                    <p>Number of Deaths: ${covid19Stats.deaths}</p>
-                                    <time>Last Update:${covid19Stats.lastUpdate}</time>`;
+                                    <div class = "datas"><h4>Province: ${covid19Stats.province}</h4>
+                                    <h4>Number of Deaths: ${covid19Stats.deaths}</h4>
+                                    <h4>Last Update: ${covid19Stats.lastUpdate}</h4></div>`;
 };
