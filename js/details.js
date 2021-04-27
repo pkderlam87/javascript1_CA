@@ -19,6 +19,7 @@ async function fetchProvince() {
         const details = await response.json();
         console.log(details);
         const covid19Stats = details.data.covid19Stats[id];
+        console.log(covid19Stats);
         createHtml(covid19Stats);
     } catch (error) {
         console.log(error);
@@ -30,5 +31,6 @@ function createHtml(covid19Stats) {
     detailsContainer.innerHTML = `<h1> ${covid19Stats.country}</h1>
                                     <div class = "datas"><h4>Province: ${covid19Stats.province}</h4>
                                     <h4>Number of Deaths: ${covid19Stats.deaths}</h4>
-                                    <h4>Last Update: ${covid19Stats.lastUpdate}</h4></div>`;
+                                    <h4>Confirmed cases: ${covid19Stats.confirmed}</h4>
+                                    <h4>Recovered: ${covid19Stats.recovered}</h4></div>`;
 };

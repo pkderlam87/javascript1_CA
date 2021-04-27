@@ -3,7 +3,8 @@
     font-family: "Merienda One", cursive;
     font-size: 2.5em;
 }
-h1{
+h1, 
+h4{
     text-align: center;
 }
 /*header*/
@@ -117,9 +118,12 @@ textarea{
 button{
     padding: 20px 30px;
     background-color: rgb(109, 200, 191);
+    font-weight: 600;
+    cursor: pointer;
 }
 /*Message -components*/
 .message {
+    margin-top: 3%;
     padding: 1rem;
     border: 2px solid;
     color: grey;
@@ -145,21 +149,51 @@ button{
     }
     .card{
         padding: 10px;
-}
+    }
     ul{
         margin-right: 10%;
     }
+    li{
+        padding-left: 5%;
+    }
 }
 @media (min-width: 601px) {
-.container{
-    font-size: 1.7em;
-}
-input{
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    }
+    .logo{
+        grid-column:1 / 2;
+    }
+    li{
+        padding: 0 50%;
+    }
+    /*index*/
+    .results{
+        padding: 2% 2% 20% 2%;
+    }
+    /*Details page*/
+    .detailsContainer{
+        display: grid;
+    }
+    /*Contact page*/
+    .container{
+    font-size: 1.2em;
+    }
+    input{
     width: 250px;
     height: 30px;
-}
-textarea{
+    }
+    textarea{
     width: 250px;
     height: 100px;
-}
+    }
+    button:hover{
+            background-color: #2ee5bd;
+            box-shadow: 0px 15px 20px rgba(45, 77, 64, 0.438);
+            color: #fff;
+            font-weight: 700;
+            transform: translateY(-3px);
+    }
+    /*to inspiration: Sebastian(@seme332). Retrieved April 2021, from: https://codepen.io/seme332/pen/reJOwo*/
 }
