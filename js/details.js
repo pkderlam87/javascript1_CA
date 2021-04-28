@@ -1,3 +1,4 @@
+const back = document.querySelector("button");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("provinceIndex");
@@ -33,3 +34,6 @@ function createHtml(covid19Stats) {
                                     <h4>Confirmed cases: ${covid19Stats.confirmed}</h4>
                                     <h4>Recovered: ${covid19Stats.recovered}</h4></div>`;
 };
+back.onclick = function () {
+    window.history.back();
+}

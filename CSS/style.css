@@ -1,22 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
-.logo{
-    background-image: url('../images/rose-butler-HWtFbzNzSA4-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.cc19 p{
-    font-family: "Merienda One", cursive;
-    opacity: 0.7;
-    background-color: #ffffff;
-    font-size: 0.7em;
-}
 h1, 
 h4{
     text-align: center;
 }
 /*header*/
 header{
-    background-image: url('../images/tim-foster-mQvQ81RwAz0-unsplash.jpg');
+    background-image: url('../images/rose-butler-HWtFbzNzSA4-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: right;
@@ -26,17 +14,14 @@ nav{
     background-color: #ffffff;
     border: 1px solid black;
     opacity: 0.7;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
 }
 ul{
     display: flex;
-    justify-content: space-between;
-    margin-right: 30%;
+    justify-content: space-around;
 }
 li{
     list-style: none;
+    padding-left: 5%;
 }
 .link{
     font-weight: bold;
@@ -56,10 +41,10 @@ li{
 /*loader*/
 .loader{
     border: 10px solid;
-    border-top: 10px solid rgba(21, 117, 108, 0.438);
-    border-right: 10px solid rgba(21, 117, 107, 0.801);
-    border-bottom: 10px solid rgba(21, 117, 107, 0.972);
-    border-left: 10px solid rgba(21, 117, 107, 0.198);
+    border-top: 10px solid rgba(117, 35, 21, 0.438);
+    border-right: 10px solid rgba(117, 35, 21, 0.801);
+    border-bottom: 10px solid rgba(117, 35, 21, 0.972);
+    border-left: 10px solid rgba(117, 35, 21, 0.198);
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -79,16 +64,12 @@ figure{
 }
 .results{
     display: grid;
-    grid-template-columns: 2fr 2fr;
     gap: 2%;
-    background-image: url('../images/canadian_map.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 2% 2% 9% 2%;
+    margin: 0 auto;
 }
 .card{
 margin: 0;
-padding: 30px;
+padding: 20px;
 background-color: #ffffff;
 border: 1px solid black;
 opacity: 0.8;
@@ -97,8 +78,9 @@ text-align: center;
 /*Details*/
 .datas{
     display: inline-block;
-    border: 2px solid rgb(21, 117, 107);
+    border: 2px solid rgb(117, 35, 21);
     border-radius: 6px;
+    margin-bottom: 3%;
 }
 /*contact page*/
 .container{
@@ -110,7 +92,7 @@ text-align: center;
 form{
    display: inline-block;
    text-align: center;
-   border: 2px solid rgb(11, 78, 71);
+   border: 2px solid rgb(117, 35, 71);
    border-radius: 6px;
    padding: 50px;
 }
@@ -125,10 +107,10 @@ textarea{
     margin-top: 5px;
 }
 button{
-    padding: 20px 30px;
-    border-radius: 10px;
+    padding: 10px 30px;
+    border-radius: 30px;
     border-color: #8b8888bc;
-    background-color: rgb(109, 200, 191);
+    background-color: rgb(199, 142, 91);
     font-weight: 600;
     cursor: pointer;
 }
@@ -156,16 +138,9 @@ button{
 @media (min-width: 300px) and (max-width: 600px){
     .results{
         display: block;
-        padding: 3%;
     }
     .card{
         padding: 10px;
-    }
-    ul{
-        margin-right: 10%;
-    }
-    li{
-        padding-left: 5%;
     }
     /*Details page*/
     .detailsContainer{
@@ -180,19 +155,10 @@ button{
     }
 }
 @media (min-width: 601px) {
-    nav{
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-    }
-    .logo{
-        grid-column:1 / 2;
-    }
-    li{
-        padding: 0 50%;
-    }
     /*index*/
     .results{
-        padding: 2% 2% 20% 2%;
+        max-width: 600px;
+        grid-template-columns: 0.5fr 0.5fr;
     }
     /*Details page*/
     .detailsContainer{
@@ -200,18 +166,24 @@ button{
     }
     /*Contact page*/
     .container{
-    font-size: 1.2em;
+        font-size: 1.2em;
+    }
+    input, 
+    #message,
+    #address{
+        width: 250px;
     }
     input{
-    width: 250px;
-    height: 30px;
+        height: 30px;
     }
-    textarea{
-    width: 250px;
-    height: 100px;
+    #message{
+        height: 80px;
+    }
+    #address{
+        height: 50px;    
     }
     button:hover{
-            background-color: #2ee5bd;
+            background-color: #728958;
             box-shadow: 0px 15px 20px rgba(45, 77, 64, 0.438);
             color: #fff;
             font-weight: 700;

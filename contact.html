@@ -9,20 +9,11 @@
     <link rel="stylesheet" href="CSS/style.css" />
     <title>Data about Covid19 in Canada|contact.html</title>
     <script src="https://kit.fontawesome.com/1dd9a9266b.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav>
-            <a class="link logo" href="index.html">
-                <div class="link cc19">
-                    <p>Canada</p>
-                    <p>Covid</p>
-                    <p>19</p>
-                </div>
-            </a>
             <ul>
                 <li><a href="index.html" class="link"><i class="fab fa-canadian-maple-leaf"></i>Home</a></li>
                 <li><a href="contact.html" class="link current"><i class="fas fa-envelope-open-text"></i>Contact</a>
@@ -58,6 +49,13 @@
                 <label>
                     Address (minimum 25 characters)
                     <textarea name="address" id="address" rows="3" cols="20"></textarea>
+                </label>
+                <div class="form-error" id="addressError">The address must have at least 25 characters</div>
+            </div>
+            <div>
+                <label>
+                    Message (not required)
+                    <textarea name="message" id="message" rows="6" cols="20"></textarea>
                 </label>
                 <div class="form-error" id="addressError">The address must have at least 25 characters</div>
             </div>
