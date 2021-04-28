@@ -15,10 +15,12 @@ async function corona() {
         const results = await response.json();
         const covid19Stats = results.data.covid19Stats;
         resultsContainer.innerHTML = " ";
-        welcome.innerHTML = `<h1>${covid19Stats[0].country} Covid-19</h1>
-            <h4>Here you will find some information about coronavirus in ${covid19Stats[0].country}</h4>
-            <h5>The last update was: ${covid19Stats[0].lastUpdate}</h5>`;
         for (let i = 0; i < covid19Stats.length; i++) {
+            //welcome text
+            welcome.innerHTML = `<h1>${covid19Stats[i].country} Covid-19</h1>
+            <h4>Here you will find some information about coronavirus in ${covid19Stats[i].country}</h4>
+            <h5>The last update was: ${covid19Stats[i].lastUpdate}</h5>`;
+            //create cards for each province, exclude cruises and repatriated travellers
             const province = covid19Stats[i].province;
             if (province === "Diamond Princess" || province === "Grand Princess" || province === "Repatriated Travellers") {
                 continue;
