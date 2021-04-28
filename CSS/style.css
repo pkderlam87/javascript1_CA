@@ -66,6 +66,7 @@ figure{
     display: grid;
     gap: 2%;
     margin: 0 auto;
+    align-items: center;
 }
 .card{
 margin: 0;

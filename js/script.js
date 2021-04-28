@@ -25,7 +25,7 @@ async function corona() {
             if (province === "Diamond Princess" || province === "Grand Princess" || province === "Repatriated Travellers") {
                 continue;
             } else {
-                resultsContainer.innerHTML += `<div class= "card"><a href="details.html?provinceIndex=${i}" class= "link">${province}</a></div>`;
+                resultsContainer.innerHTML += `<a href="details.html?provinceIndex=${i}" class= "link"><div class= "card">${province}</div></a>`;
             }
         }
     } catch (error) {
