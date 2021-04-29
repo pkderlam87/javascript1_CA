@@ -16,7 +16,7 @@ async function corona() {
         for (let i = 0; i < covid19Stats.length; i++) {
             //welcome text
             welcome.innerHTML = `<h1>${covid19Stats[i].country} Covid-19</h1>
-            <h4>Here you will find some information about coronavirus in ${covid19Stats[i].country}</h4>
+            <h4>Here you will find some information about the SARS-CoV-2 outbreak in ${covid19Stats[i].country}</h4>
             <h4>The last update was: ${covid19Stats[i].lastUpdate}</h4>`;
             //create cards for each province, exclude cruises and repatriated travellers
             const province = covid19Stats[i].province;
