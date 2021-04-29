@@ -37,6 +37,11 @@ li{
     margin: 0;
     
 }
+/*main*/
+main{
+    max-width: 600px;
+    margin: 0 auto;
+}
 /* to inspiration: w3schools.com (2021). Retrieved April 2021, from: https://www.w3schools.com/css/css_image_transparency.asp*/
 /*loader*/
 .loader{
@@ -58,7 +63,7 @@ li{
 /* to inspiration: w3schools.com (2021). Retrieved April 2021, from: https://www.w3schools.com/howto/howto_css_loader.asp*/
 /*footer*/
 footer{
-    margin-top: 5%;
+    margin-top: 10%;
     background-image: url('../images/rose-butler-HWtFbzNzSA4-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -112,9 +117,12 @@ text-align: center;
 form{
    display: inline-block;
    text-align: center;
-   border: 2px solid rgb(117, 35, 71);
-   border-radius: 6px;
    padding: 50px;
+}
+form,
+button{
+    border-radius: 6px;
+    border: 2px solid rgb(117, 35, 71);
 }
 input,
 textarea{
@@ -127,17 +135,11 @@ textarea{
     margin-top: 5px;
 }
 button{
+    margin-top: 2%;
     padding: 10px 30px;
-    border-radius: 30px;
-    border-color: #8b8888bc;
-    background: radial-gradient(circle, rgba(254,253,249,1) 0%, rgba(255,109,109,1) 47%, rgba(249,249,249,1) 100%);
+    background: #ffffff;
     font-weight: 600;
     cursor: pointer;
-}
-/*references page*/
-.references{
-    max-width: 600px;
-    margin: 0 auto;
 }
 /*Message -components*/
 .message {
@@ -161,6 +163,11 @@ button{
 } 
 /*Media Query*/
 @media (min-width: 300px) and (max-width: 600px){
+    /*nav*/
+    .link{
+        font-size: 1.2em;
+    }
+    /*index*/
     .results{
         display: block;
     }
@@ -176,13 +183,12 @@ button{
     }
     .datas{
         padding:8%;
-        margin: 5% -10%;
+        margin: 5% -5%;
     }
 }
 @media (min-width: 601px) {
     /*index*/
     .results{
-        max-width: 600px;
         grid-template-columns: 0.5fr 0.5fr;
     }
     /*Details page*/
@@ -196,22 +202,16 @@ button{
     input, 
     #message,
     #address{
-        width: 250px;
+        width: 260px;
     }
     input{
         height: 30px;
-    }
-    #message{
-        height: 80px;
     }
     #address{
         height: 50px;    
     }
     button:hover{
-            background:linear-gradient(90deg, rgba(254,253,249,1) 9%, rgba(255,109,109,1) 47%, rgba(249,249,249,1) 75%); 
             box-shadow: 0px 15px 20px rgba(45, 77, 64, 0.438);
-            color: #000;
-            font-weight: 700;
             transform: translateY(-3px);
     }
     /*to inspiration: Sebastian(@seme332). Retrieved April 2021, from: https://codepen.io/seme332/pen/reJOwo*/
