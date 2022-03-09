@@ -1,4 +1,5 @@
 This is a Noroff's Course Assigntment - JavaScript 1 (The focus is API calls)
+https://modest-bartik-b5a061.netlify.app/index.html - My website 
 
 1- Find an API
 Search for a public, free-to-use API.
